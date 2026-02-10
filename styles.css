@@ -419,3 +419,16 @@ body {
         font-size: 1rem;
     }
 }
+
+@supports(padding: max(0px)) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .card {
+        padding-bottom: calc(36px + env(safe-area-inset-bottom));
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+}
+
