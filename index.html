@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts-bg"></div>
+
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-video">
+                <video id="pucca-video" src="img/pucca.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="modal-text">
+                Mi ling ling, pensando en cómo pedirte que seas mi San Valentín, 
+                se me ocurrió hacerlo de la misma forma con la cual pienso mantenerte, programando jejejej, y si no quieres te haré un amarre, 
+                te amo.
+            <br>
+            <br>
+                Por cierto, la página tiene música, sube el volumen y no te asustes.
+            </p>
+            <button class="modal-btn" onclick="closeModal()">Oki 💘</button>
+        </div>
+    </div>
+
+    <div id="options-modal" class="modal-overlay hidden">
+        <div class="modal-content options-modal-content">
+            <p class="options-question" id="options-question-text">
+                ¿Qué quieres comer?
+            </p>
+
+            <div class="options-grid">
+                <div class="option-card">
+                    <img src="img/madera.png" alt="Madera" class="option-image">
+                    <button id="options-a-btn" class="option-btn">
+                        Opción A - Madera 🪵
+                    </button>
+                </div>
+
+                <div class="option-card">
+                    <img src="img/macanchis.png" alt="Macanchis" class="option-image">
+                    <button id="options-b-btn" class="option-btn">
+                        Opción B - Macanchis 🧀
+                    </button>
+                </div>
+            </div>
+
+            <p id="options-answer-text" class="options-answer-text"></p>
+
+            <button id="options-ok-btn" class="options-ok-btn hidden">
+                Oki ✅
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h1>Para mi marumisita preciosa</h1>
+
+        <p class="phrase">
+            Eres todo lo que alguna vez desee y más.
+        </p>
+        <p class="phrase">
+            Por ello me gustaría demostrarte lo que mereces.
+        </p>
+
+        <p class="love-you">— Te adoro ❤️</p>
+
+        <div class="video-wrapper">
+            <video id="flower-video" src="img/flowers2.mov" autoplay muted loop playsinline></video>
+        </div>
+
+        <p class="since-title">Mi amor por ti comenzó hace...</p>
+
+        <div class="counter">
+            <div class="time-box">
+                <span id="days">000</span>
+                <span class="label">días</span>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <span class="label">horas</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <span class="label">minutos</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <span class="label">segundos</span>
+            </div>
+        </div>
+
+        <button class="valentine-btn" onclick="showQuestion()">
+            Toca aquí
+        </button>
+
+        <div id="question" class="question hidden">
+            <p class="question-text">¿Quieres ser mi San Valentín este 14 de febrero? 💘</p>
+            <div class="question-buttons">
+                <button class="yes" onclick="answerYes()">Sí</button>
+                <button class="no" onclick="answerNo()">No</button>
+            </div>
+            <p id="answer-text" class="answer-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
